@@ -1,3 +1,9 @@
+import { TheHeader } from "@/components/TheHeader";
+
 export default function Page() {
-	return <main>Homepage</main>;
+	return (
+		<>
+			<TheHeader />
+		</>
+	);
 }

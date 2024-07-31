@@ -21,3 +21,5 @@ export default function RootLayout({
 // home
 // /projects/title
 // /contact
+
+// px-2 md:px-4 for container
