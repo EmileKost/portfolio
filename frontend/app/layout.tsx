@@ -17,3 +17,7 @@ export default function RootLayout({
 		</html>
 	);
 }
+
+// home
+// /projects/title
+// /contact
