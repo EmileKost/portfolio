@@ -21,7 +21,7 @@ export const MovingImage = ({ refMouse }: { refMouse?: any }) => {
 			variants={movingImageVariants}
 			initial={"initial"}
 			animate={"animate"}
-			className="absolute right-0 z-[-10] translate-y-0 bottom-0 md:bottom-1/2 md:translate-y-1/2">
+			className="absolute right-0 z-[-10] translate-y-0 md:bottom-1/2 md:translate-y-1/2">
 			<Image
 				src={"/images/me.png"}
 				alt="Picture of me"
