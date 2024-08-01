@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
@@ -22,7 +23,7 @@ const spanVariants = {
 
 export const HomeHero = () => {
 	const refContainer = useRef<HTMLDivElement>(null);
-	const getMousePosition = (e: MouseEvent) => {
+	const getMousePosition = (e: any) => {
 		if (!refContainer.current || !e) return;
 
 		const { windowWidth, windowHeight } = getWindowSizes();
