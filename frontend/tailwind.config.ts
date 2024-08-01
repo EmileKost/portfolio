@@ -8,7 +8,7 @@ const config: Config = {
 	],
 	theme: {
 		fontFamily: {
-			primary: "Helvetica",
+			primary: ["var(--font-n27)"],
 		},
 		extend: {
 			backgroundImage: {
