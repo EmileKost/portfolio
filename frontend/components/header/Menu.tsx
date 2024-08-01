@@ -28,6 +28,20 @@ const menuItemVariants = {
 		opacity: 1,
 		y: 0,
 	},
+	hover: {
+		color: "#0019FF",
+	},
+};
+
+const circleVariant = {
+	initial: {
+		opacity: 0,
+		y: -10,
+	},
+	hover: {
+		opacity: 1,
+		y: 0,
+	},
 };
 
 export const Menu = () => {
@@ -46,7 +60,7 @@ export const Menu = () => {
 			<AnimatePresence>
 				{menuItems && isOpen && (
 					<motion.ul
-						className="flex flex-col items-end md:flex-row-reverse gap-4"
+						className="flex flex-col items-end md:flex-row-reverse gap-2 md:gap-7"
 						variants={containerVariants}
 						initial={"initial"}
 						animate={"animate"}
@@ -55,7 +69,7 @@ export const Menu = () => {
 							<motion.li
 								key={idx}
 								variants={menuItemVariants}
-								className="hover:text-blue-primary font-primary transition-colors text-base md:text-xl">
+								className="font-primary hover:text-blue-primary transition-colors text-base md:text-xl relative">
 								<a href="">{item}</a>
 							</motion.li>
 						))}
