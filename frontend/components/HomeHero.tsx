@@ -43,7 +43,7 @@ export const HomeHero = () => {
 		<div
 			onMouseMove={(e) => getMousePosition(e)}
 			ref={refContainer}
-			className="w-full relative h-screen flex items-start md:items-center">
+			className="w-full relative h-screen flex items-start md:items-center px-2 md:px-6">
 			<h1 className="flex flex-col gap-2 md:gap-6 mt-[150px] md:mt-0">
 				{heroText &&
 					heroText.map((text: string, idx: number) => (
