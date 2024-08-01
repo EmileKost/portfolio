@@ -10,6 +10,9 @@ const config: Config = {
 		fontFamily: {
 			primary: ["var(--font-n27)"],
 		},
+		zIndex: {
+			max: "9999",
+		},
 		extend: {
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
