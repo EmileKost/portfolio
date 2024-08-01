@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const movingImageVariants = {
 	initial: {
 		opacity: 0,
-		scale: 0.5,
+		scale: 0,
 		y: "50%",
 	},
 	animate: {
