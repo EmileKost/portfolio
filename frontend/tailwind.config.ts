@@ -24,6 +24,9 @@ const config: Config = {
 			blue: {
 				primary: "#0019FF",
 			},
+			white: {
+				primary: "#FFFFFF",
+			},
 		},
 	},
 	plugins: [],
