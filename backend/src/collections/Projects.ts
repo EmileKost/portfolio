@@ -57,5 +57,90 @@ export const Projects = {
 				layout: "vertical",
 			},
 		},
+		{
+			name: "cardImages",
+			label: "Card images",
+			type: "array",
+			minRows: 1,
+			maxRows: 2,
+			required: true,
+			fields: [
+				{
+					name: "image",
+					label: "Image",
+					type: "upload",
+					relationTo: "media",
+				},
+			],
+		},
+		{
+			name: "cardVideo",
+			label: "Card video",
+			required: false,
+			type: "upload",
+			relationTo: "media",
+		},
+		{
+			name: "date",
+			label: "Date",
+			type: "date",
+			required: true,
+			admin: {
+				date: {
+					pickerAppearance: "monthOnly",
+					displayFormat: "MMMM yyyy",
+				},
+			},
+		},
+		{
+			name: "client",
+			label: "Client",
+			required: false,
+			type: "text",
+		},
+		{
+			name: "paragraphs",
+			label: "Text paragraphs",
+			type: "array",
+			required: true,
+			minRows: 1,
+			maxRows: 5,
+			fields: [
+				{
+					name: "content",
+					label: "Text content",
+					type: "textarea",
+				},
+			],
+		},
+		{
+			name: "heroImage",
+			label: "Image displayed on hero",
+			required: true,
+			type: "upload",
+			relationTo: "media",
+		},
+		{
+			name: "sliderImages",
+			label: "Slider images",
+			type: "array",
+			minRows: 1,
+			maxRows: 6,
+			required: true,
+			fields: [
+				{
+					name: "image",
+					label: "Image",
+					type: "upload",
+					relationTo: "media",
+				},
+			],
+		},
+		{
+			name: "githubUrl",
+			label: "Github URL",
+			type: "text",
+			required: false,
+		},
 	],
 } as CollectionConfig;
