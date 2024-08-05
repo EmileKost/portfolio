@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
 import "./globals.css";
 
 export const metadata: Metadata = {
-	title: "Portfolio",
-	description: "Emile Kost portfolio website",
+	title: "Emile Kost",
+	description: "Welcome to my personal portfolio website",
 };
 
 const n27 = localFont({
