@@ -5,6 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import { TheHeader } from "@/components/header/TheHeader";
 import { HomeHero } from "@/components/HomeHero";
 import { About } from "@/components/About";
+import { Projects } from "@/components/Projects";
 
 import { useChangeHeaderColor } from "@/src/hooks/useChangeHeaderColor";
 
@@ -35,7 +36,9 @@ export default function Page() {
 					ref={refAbout}>
 					<About />
 				</div>
-				{/* Projects here first */}
+				<div className="w-full">
+					<Projects projects={"skibidap"} />
+				</div>
 				<div ref={refContact}></div>
 			</main>
 		</>

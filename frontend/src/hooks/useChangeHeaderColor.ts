@@ -15,11 +15,8 @@ export const useChangeHeaderColor = (
 	useEffect(() => {
 		if (!refAbout || !refContact) return;
 
-		if (isAboutInView || isContactInView) {
-			setBlueContainerInView(true);
-		} else {
-			setBlueContainerInView(false);
-		}
+		const isEitherInView = isAboutInView || isContactInView;
+		setBlueContainerInView(isEitherInView);
 	}, [
 		isAboutInView,
 		isContactInView,
