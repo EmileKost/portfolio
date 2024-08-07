@@ -29,3 +29,5 @@ export const useChangeHeaderColor = (
 };
 
 // TODO: We can maybe do this on a more dynamic way with [data-]
+// Door precies te kunnen snappen moeten we once: true zetten en ook inView checken van de witte containers zodat de snap goed werkt
+// Dit wordt de refactor stap voor de volgende keer!!!!!!
