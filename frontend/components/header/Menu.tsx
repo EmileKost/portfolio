@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
+import { twMerge } from "tailwind-merge";
+
 import { IconPlus } from "../icons/Plus";
 
 // TODO: Later change to payload BE data
@@ -44,16 +46,19 @@ const circleVariant = {
 	},
 };
 
-export const Menu = () => {
+export const Menu = ({ isBlue }: { isBlue: boolean }) => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	return (
 		<div className="flex flex-col md:flex-row-reverse gap-8 items-center">
 			<button
-				className="group uppercase text-base md:text-xl flex items-center gap-2 text-blue-primary"
+				className={twMerge(
+					"group uppercase text-base md:text-xl flex items-center gap-",
+					isBlue ? "text-white-primary" : "text-blue-primary"
+				)}
 				onClick={() => setIsOpen(!isOpen)}>
 				<span className="group-hover:rotate-45 transition-transform">
-					<IconPlus />
+					<IconPlus color={isBlue ? "#FFFFFF" : "#0019FF"} />
 				</span>
 				Menu
 			</button>
