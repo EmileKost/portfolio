@@ -30,3 +30,5 @@ export const useChangeHeaderColor = (
 
 	return blueContainerInView;
 };
+
+// TODO: We can maybe do this on a more dynamic way with [data-]
