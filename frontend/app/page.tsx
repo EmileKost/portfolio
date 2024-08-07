@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 
 import { TheHeader } from "@/components/header/TheHeader";
+import { ScrollSnapper } from "@/components/ScrollSnapper";
 import { HomeHero } from "@/components/HomeHero";
 import { About } from "@/components/About";
 import { Projects } from "@/components/Projects";
@@ -27,21 +28,23 @@ export default function Page() {
 	return (
 		<>
 			<TheHeader isBlue={blueContainerIsInView} />
-			<main className="w-full max-h-screen overflow-y-scroll snap-y snap-mandatory">
-				<div className="w-full h-screen snap-center">
-					<HomeHero />
-				</div>
-				<div
-					className="w-full h-screen snap-center"
-					ref={refAbout}>
-					<About />
-				</div>
-				<div className="w-full h-screen snap-center">
-					<Projects projects={"skibidap"} />
-				</div>
-				{/* <div
+			<main>
+				<ScrollSnapper>
+					<div className="w-full h-screen snap-center">
+						<HomeHero />
+					</div>
+					<div
+						className="w-full h-screen snap-center"
+						ref={refAbout}>
+						<About />
+					</div>
+					<div className="w-full h-screen snap-center">
+						<Projects projects={"skibidap"} />
+					</div>
+					{/* <div
 					ref={refContact}
 					className="w-full h-screen snap-center snap-element"></div> */}
+				</ScrollSnapper>
 			</main>
 		</>
 	);
