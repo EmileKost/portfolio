@@ -27,19 +27,21 @@ export default function Page() {
 	return (
 		<>
 			<TheHeader isBlue={blueContainerIsInView} />
-			<main className="w-full">
-				<div className="w-full">
+			<main className="w-full max-h-screen overflow-y-scroll snap-y snap-mandatory">
+				<div className="w-full h-screen snap-center">
 					<HomeHero />
 				</div>
 				<div
-					className="w-full"
+					className="w-full h-screen snap-center"
 					ref={refAbout}>
 					<About />
 				</div>
-				<div className="w-full">
+				<div className="w-full h-screen snap-center">
 					<Projects projects={"skibidap"} />
 				</div>
-				<div ref={refContact}></div>
+				{/* <div
+					ref={refContact}
+					className="w-full h-screen snap-center snap-element"></div> */}
 			</main>
 		</>
 	);
