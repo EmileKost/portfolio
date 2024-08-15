@@ -5,7 +5,7 @@ type ScrollSnapperProps = {
 };
 
 export const ScrollSnapper = ({ children }: ScrollSnapperProps) => (
-	<div className="w-full max-h-screen overflow-y-scroll snap-y snap-mandatory">
+	<div className="w-full max-h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory">
 		{children}
 	</div>
 );

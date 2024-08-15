@@ -1,15 +1,29 @@
 import { projects as testProjects } from "@/src/constants/projects";
+import { Project } from "@/src/types/project";
 import { splitProjectsArray } from "@/src/utils/splitProjectsArray";
+import { CardVertical } from "./cards/CardVertical";
 
 export const ProjectsSlider = (projects: any) => {
 	const { verticalArray, horizontalArray } = splitProjectsArray(testProjects);
 
-	console.log(verticalArray);
-	console.log(horizontalArray);
-
 	return (
-		<div>
-			<div></div>
+		<div className="w-full">
+			{verticalArray && verticalArray.length > 0 && (
+				<ul className="max-w-screen overflow-hidden flex justify-start gap-16">
+					{verticalArray.map((project: Project, idx: number) => (
+						<CardVertical
+							project={project}
+							idx={idx}
+						/>
+					))}
+					{verticalArray.map((project: Project, idx: number) => (
+						<CardVertical
+							project={project}
+							idx={idx}
+						/>
+					))}
+				</ul>
+			)}
 		</div>
 	);
 };
