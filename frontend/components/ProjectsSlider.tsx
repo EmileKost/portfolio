@@ -7,7 +7,7 @@ export const ProjectsSlider = (projects: any) => {
 	const { verticalArray, horizontalArray } = splitProjectsArray(testProjects);
 
 	return (
-		<div className="w-screen overflow-x-hidden">
+		<div className="w-screen">
 			<div className="w-[200%] flex">
 				<ul className="w-full flex gap-28 animate-slider h">
 					{verticalArray &&
