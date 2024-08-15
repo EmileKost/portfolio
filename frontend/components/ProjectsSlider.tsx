@@ -7,9 +7,9 @@ export const ProjectsSlider = (projects: any) => {
 	const { verticalArray, horizontalArray } = splitProjectsArray(testProjects);
 
 	return (
-		<div className="w-screen">
+		<div className="w-screen relative">
 			<div className="w-[200%] flex">
-				<ul className="w-full flex justify-between animate-slider pl-10">
+				<ul className="w-full flex justify-between animate-slider-vertical pl-10">
 					{verticalArray &&
 						verticalArray.length > 0 &&
 						verticalArray.map((project: Project, idx: number) => (
@@ -19,7 +19,7 @@ export const ProjectsSlider = (projects: any) => {
 							/>
 						))}
 				</ul>
-				<ul className="w-full flex justify-between animate-slider pl-10">
+				<ul className="w-full flex justify-between animate-slider-vertical pl-10">
 					{verticalArray &&
 						verticalArray.length > 0 &&
 						verticalArray.map((project: Project, idx: number) => (
@@ -29,6 +29,36 @@ export const ProjectsSlider = (projects: any) => {
 							/>
 						))}
 				</ul>
+			</div>
+			<div className="w-[200%] flex absolute top-16 z-[-10] pl-10">
+				<div className="w-full flex justify-between animate-slider-horizontal">
+					<div className="w-[350px] h-[220px] translate-y-[240px] bg-[grey]">
+						TEST
+					</div>
+					<div className="w-[350px] h-[220px] -translate-y-[200px] bg-[grey]">
+						TEST
+					</div>
+					<div className="w-[350px] h-[220px] translate-y-[200px] bg-[grey]">
+						TEST
+					</div>
+					<div className="w-[350px] h-[220px] -translate-y-[200px] bg-[grey]">
+						TEST
+					</div>
+				</div>
+				<div className="w-full flex justify-between animate-slider-horizontal">
+					<div className="w-[350px] h-[220px] translate-y-[200px] bg-[grey]">
+						TEST
+					</div>
+					<div className="w-[350px] h-[220px] -translate-y-[200px] bg-[grey]">
+						TEST
+					</div>
+					<div className="w-[350px] h-[220px] translate-y-[200px] bg-[grey]">
+						TEST
+					</div>
+					<div className="w-[350px] h-[220px] -translate-y-[200px] bg-[grey]">
+						TEST
+					</div>
+				</div>
 			</div>
 		</div>
 	);
