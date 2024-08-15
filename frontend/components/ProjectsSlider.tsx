@@ -9,20 +9,24 @@ export const ProjectsSlider = (projects: any) => {
 	return (
 		<div className="w-full">
 			{verticalArray && verticalArray.length > 0 && (
-				<ul className="max-w-screen overflow-hidden flex justify-start gap-16">
-					{verticalArray.map((project: Project, idx: number) => (
-						<CardVertical
-							project={project}
-							idx={idx}
-						/>
-					))}
-					{verticalArray.map((project: Project, idx: number) => (
-						<CardVertical
-							project={project}
-							idx={idx}
-						/>
-					))}
-				</ul>
+				<div className="max-w-screen flex gap-16">
+					<ul className="max-w-screen flex justify-start gap-16">
+						{verticalArray.map((project: Project, idx: number) => (
+							<CardVertical
+								project={project}
+								idx={idx}
+							/>
+						))}
+					</ul>
+					<ul className="max-w-screen flex justify-start gap-16">
+						{verticalArray.map((project: Project, idx: number) => (
+							<CardVertical
+								project={project}
+								idx={idx + 1}
+							/>
+						))}
+					</ul>
+				</div>
 			)}
 		</div>
 	);
