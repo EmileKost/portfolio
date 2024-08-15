@@ -21,6 +21,9 @@ const config: Config = {
 			},
 		},
 		colors: {
+			black: {
+				primary: "#000000",
+			},
 			blue: {
 				primary: "#0019FF",
 			},
