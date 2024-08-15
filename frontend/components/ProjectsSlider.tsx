@@ -9,7 +9,7 @@ export const ProjectsSlider = (projects: any) => {
 	return (
 		<div className="w-screen">
 			<div className="w-[200%] flex">
-				<ul className="w-full flex gap-28 animate-slider h">
+				<ul className="w-full flex justify-between animate-slider">
 					{verticalArray &&
 						verticalArray.length > 0 &&
 						verticalArray.map((project: Project, idx: number) => (
@@ -19,7 +19,7 @@ export const ProjectsSlider = (projects: any) => {
 							/>
 						))}
 				</ul>
-				<ul className="w-full flex gap-28 animate-slider">
+				<ul className="w-full flex justify-between animate-slider">
 					{verticalArray &&
 						verticalArray.length > 0 &&
 						verticalArray.map((project: Project, idx: number) => (
@@ -40,3 +40,8 @@ export const ProjectsSlider = (projects: any) => {
 // - De lijsten moeten draggable zijn, en de items moeten onHover naar voren komen zodat deze wel leesbaar zijn.
 
 // - Je wilt sowieso eerst de projects lijst opdelen in either vertical of horizontal
+
+// TODO:
+// - Horizontal
+// - Draggable
+// - Clicking transition

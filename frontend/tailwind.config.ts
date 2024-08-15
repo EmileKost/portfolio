@@ -8,7 +8,7 @@ const config: Config = {
 	],
 	theme: {
 		animation: {
-			slider: "slide 30s infinite linear",
+			slider: "slide 45s infinite linear",
 		},
 		keyframes: {
 			slide: {
