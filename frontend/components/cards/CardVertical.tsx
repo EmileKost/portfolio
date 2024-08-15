@@ -17,7 +17,7 @@ export const CardVertical = ({ project, idx }: CardVerticalProps) => {
 		<li
 			key={project.title}
 			className={twMerge(
-				"group w-[300px]",
+				"group w-[250px]",
 				idx % 2 ? "translate-y-12" : "-translate-y-12"
 			)}>
 			<figure className="relative flex justify-center items-center overflow-hidden">

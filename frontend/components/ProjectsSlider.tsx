@@ -9,7 +9,7 @@ export const ProjectsSlider = (projects: any) => {
 	return (
 		<div className="w-screen">
 			<div className="w-[200%] flex">
-				<ul className="w-full flex justify-between animate-slider">
+				<ul className="w-full flex justify-between animate-slider pl-10">
 					{verticalArray &&
 						verticalArray.length > 0 &&
 						verticalArray.map((project: Project, idx: number) => (
@@ -19,7 +19,7 @@ export const ProjectsSlider = (projects: any) => {
 							/>
 						))}
 				</ul>
-				<ul className="w-full flex justify-between animate-slider">
+				<ul className="w-full flex justify-between animate-slider pl-10">
 					{verticalArray &&
 						verticalArray.length > 0 &&
 						verticalArray.map((project: Project, idx: number) => (

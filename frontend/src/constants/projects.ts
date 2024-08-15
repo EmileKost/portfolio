@@ -18,18 +18,6 @@ export const projects = [
 		isVertical: true,
 	},
 	{
-		title: "SpaceX",
-		description: "Discover hidden stories with AI.",
-		tags: ["Frontend development", "UX", "Interaction"],
-		isVertical: true,
-	},
-	{
-		title: "SpaceX",
-		description: "Discover hidden stories with AI.",
-		tags: ["Frontend development", "UX", "Interaction"],
-		isVertical: true,
-	},
-	{
 		title: "Discover",
 		description: "Discover hidden stories with AI.",
 		tags: ["Frontend development", "UX", "Interaction"],
