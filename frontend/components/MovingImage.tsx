@@ -35,3 +35,6 @@ export const MovingImage = ({ refMouse }: { refMouse?: any }) => {
 		</motion.figure>
 	);
 };
+
+// TODO:
+// - Mouse postion together with skew should give a globe like effect that follows the cursor slightly and 3d-rotates (skew) based on mouse postion
