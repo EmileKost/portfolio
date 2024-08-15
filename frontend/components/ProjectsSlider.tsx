@@ -30,7 +30,7 @@ export const ProjectsSlider = (projects: any) => {
 						))}
 				</ul>
 			</div>
-			<div className="w-[200%] flex absolute top-16 z-[-10] pl-10">
+			<div className="w-[200%] flex absolute top-16 pl-10 -z-[1]">
 				<div className="w-full flex justify-between animate-slider-horizontal">
 					<div className="w-[350px] h-[220px] translate-y-[240px] bg-[grey]">
 						TEST
