@@ -7,27 +7,29 @@ export const ProjectsSlider = (projects: any) => {
 	const { verticalArray, horizontalArray } = splitProjectsArray(testProjects);
 
 	return (
-		<div className="w-full">
-			{verticalArray && verticalArray.length > 0 && (
-				<div className="max-w-screen flex gap-16">
-					<ul className="max-w-screen flex justify-start gap-16">
-						{verticalArray.map((project: Project, idx: number) => (
+		<div className="w-screen overflow-x-hidden">
+			<div className="w-[200%] flex">
+				<ul className="w-full flex gap-28 animate-slider h">
+					{verticalArray &&
+						verticalArray.length > 0 &&
+						verticalArray.map((project: Project, idx: number) => (
 							<CardVertical
 								project={project}
 								idx={idx}
 							/>
 						))}
-					</ul>
-					<ul className="max-w-screen flex justify-start gap-16">
-						{verticalArray.map((project: Project, idx: number) => (
+				</ul>
+				<ul className="w-full flex gap-28 animate-slider">
+					{verticalArray &&
+						verticalArray.length > 0 &&
+						verticalArray.map((project: Project, idx: number) => (
 							<CardVertical
 								project={project}
-								idx={idx + 1}
+								idx={idx}
 							/>
 						))}
-					</ul>
-				</div>
-			)}
+				</ul>
+			</div>
 		</div>
 	);
 };

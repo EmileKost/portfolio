@@ -7,6 +7,19 @@ const config: Config = {
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
+		animation: {
+			slider: "slide 30s infinite linear",
+		},
+		keyframes: {
+			slide: {
+				from: {
+					transform: "translateX(0)",
+				},
+				to: {
+					transform: "translateX(-100%)",
+				},
+			},
+		},
 		fontFamily: {
 			primary: ["var(--font-n27)"],
 		},

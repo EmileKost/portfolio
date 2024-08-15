@@ -14,7 +14,7 @@ export const Projects = (projects: any) => {
 					Or checkout my work on Github <span>Icon arrow</span>
 				</a>
 			</div>
-			<div>
+			<div className="">
 				{isMobile ? (
 					<div>I am the mobile slider</div>
 				) : (
