@@ -6,8 +6,8 @@ export const useMousePosition = (ref: React.RefObject<HTMLDivElement>) => {
 		const getMousePosition = (e: MouseEvent) => {
 			if (ref.current) {
 				const rect = ref.current.getBoundingClientRect();
-				const x = e.clientX - rect.left;
-				const y = e.clientY - rect.top;
+				const x = e.clientX;
+				const y = e.clientY;
 				console.log(x, y);
 
 				setPosition({ x, y });

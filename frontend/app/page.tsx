@@ -7,7 +7,7 @@ import { HomeHero } from "@/components/HomeHero";
 import { About } from "@/components/About";
 
 import { useChangeHeaderColor } from "@/src/hooks/useChangeHeaderColor";
-import { useMousePosition } from "@/src/hooks/useGetMousePosition";
+// import { useMousePosition } from "@/src/hooks/useGetMousePosition";
 
 // import { ROUTES } from "@/src/routes/routes";
 
@@ -20,7 +20,6 @@ export default function Page() {
 		useState<boolean>(false);
 
 	const isInView = useChangeHeaderColor(refAbout, refContact);
-	const position = useMousePosition(refHero);
 
 	useEffect(() => {
 		isInView ? setBlueContainerIsInView(true) : setBlueContainerIsInView(false);
