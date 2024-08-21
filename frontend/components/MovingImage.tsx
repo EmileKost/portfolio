@@ -5,12 +5,14 @@ export const MovingImage = ({
 	x,
 	y,
 	opacity,
-	skewValue,
+	skewX,
+	skewY,
 }: {
 	x: number;
 	y: number;
 	opacity: number;
-	skewValue: number;
+	skewX: number;
+	skewY: number;
 }) => {
 	return (
 		<motion.figure
@@ -18,7 +20,8 @@ export const MovingImage = ({
 				left: x,
 				top: y,
 				opacity: opacity,
-				skewX: skewValue,
+				skewY: skewY,
+				skewX: skewX,
 			}}
 			transition={{
 				ease: "easeOut",
@@ -38,3 +41,5 @@ export const MovingImage = ({
 		</motion.figure>
 	);
 };
+
+// TODO: Check for better heights on responsive design

@@ -3,35 +3,31 @@ import { useState, useEffect } from "react";
 export const useGetMouseAnimationValues = (ref: any) => {
 	const [positionX, setPositionX] = useState<number>(0);
 	const [positionY, setPositionY] = useState<number>(0);
-	const [skewValue, setSkewValue] = useState<number>(0);
+	const [skewXValue, setSkewXValue] = useState<number>(0);
+	const [skewYValue, setSkewYValue] = useState<number>(0);
 	const [opacityValue, setOpacityValue] = useState<number>(0);
 
 	useEffect(() => {
 		if (!ref.current) return;
 		const container = ref.current;
 
-		// 0deg -> 10deg
-		// percentage van tophalf or bottomhalf
-		// skewValue =
-
 		const getAnimationValues = (event: MouseEvent) => {
-			const { height } = container.getBoundingClientRect();
+			const { height, width } = container.getBoundingClientRect();
 			const { clientX, clientY } = event;
 
 			const isTopHalfScreen = clientY <= height / 2 ? true : false;
+			const isLeftHalfScreen = clientX <= width / 2 ? true : false;
+			const cursorIsOutOfContainer =
+				clientX <= 10 || clientY <= 140 ? true : false;
 
-			if (isTopHalfScreen) {
-				setSkewValue(4);
-			} else {
-				setSkewValue(-4);
-			}
+			// Set skewX and Y
+			setSkewXValue(isLeftHalfScreen ? 4 : -4);
+			setSkewYValue(isTopHalfScreen ? 4 : -4);
 
-			if (clientX <= 10 || clientY <= 140) {
-				setOpacityValue(0);
-			} else {
-				setOpacityValue(1);
-			}
+			// Set opacity
+			setOpacityValue(cursorIsOutOfContainer ? 0 : 1);
 
+			// Set mouse position
 			setPositionX(clientX);
 			setPositionY(clientY);
 		};
@@ -41,5 +37,5 @@ export const useGetMouseAnimationValues = (ref: any) => {
 		return () => container.removeEventListener("mousemove", getAnimationValues);
 	});
 
-	return { positionX, positionY, opacityValue, skewValue };
+	return { positionX, positionY, opacityValue, skewXValue, skewYValue };
 };
