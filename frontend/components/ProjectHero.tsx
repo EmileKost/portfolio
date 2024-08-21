@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
+import { IconBack } from "./icons/IconBack";
 import { Tag } from "./Tag";
 
 const variants = {
@@ -49,6 +50,11 @@ export const ProjectHero = () => {
 					))}
 				</ul>
 			</motion.div>
+			<button
+				onClick={() => router.back()}
+				className="absolute top-12 left-2 md:left-6 -scale-x-100">
+				<IconBack />
+			</button>
 		</div>
 	);
 };
