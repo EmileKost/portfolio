@@ -21,8 +21,8 @@ export const useGetMouseAnimationValues = (ref: any) => {
 				clientX <= 10 || clientY <= 140 ? true : false;
 
 			// Set skewX and Y
-			setSkewXValue(isLeftHalfScreen ? 4 : -4);
-			setSkewYValue(isTopHalfScreen ? 4 : -4);
+			setSkewXValue(isLeftHalfScreen ? 2 : -2);
+			setSkewYValue(isTopHalfScreen ? 2 : -2);
 
 			// Set opacity
 			setOpacityValue(cursorIsOutOfContainer ? 0 : 1);
