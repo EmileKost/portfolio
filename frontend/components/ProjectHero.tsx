@@ -46,7 +46,10 @@ export const ProjectHero = () => {
 				</h1>
 				<ul className="flex md:flex-row-reverse gap-0.5 grow-0 mt-2 max-w-[80vw] md:max-w-[40vw] flex-wrap">
 					{tags.map((tag: string) => (
-						<Tag text={tag} />
+						<Tag
+							key={tag}
+							text={tag}
+						/>
 					))}
 				</ul>
 			</motion.div>
