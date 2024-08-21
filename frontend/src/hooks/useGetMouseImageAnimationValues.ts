@@ -7,12 +7,18 @@ export const useGetMouseAnimationValues = (ref: any) => {
 	const [skewYValue, setSkewYValue] = useState<number>(0);
 	const [opacityValue, setOpacityValue] = useState<number>(0);
 
+	// TODO:
+	// - Margins
+	// - Only move image 180px and limit this
+
 	useEffect(() => {
 		if (!ref.current) return;
 		const container = ref.current;
 
+		const { height, width, top, bottom, left, right } =
+			container.getBoundingClientRect();
+
 		const getAnimationValues = (event: MouseEvent) => {
-			const { height, width } = container.getBoundingClientRect();
 			const { clientX, clientY } = event;
 
 			const isTopHalfScreen = clientY <= height / 2 ? true : false;
