@@ -19,6 +19,8 @@ export const useGetMouseAnimationValues = (ref: any) => {
 			container.getBoundingClientRect();
 
 		const getAnimationValues = (event: MouseEvent) => {
+			if (!event) return;
+
 			const { clientX, clientY } = event;
 
 			const isTopHalfScreen = clientY <= height / 2 ? true : false;

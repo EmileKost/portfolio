@@ -1,7 +1,11 @@
+import { ProjectHero } from "@/components/ProjectHero";
+
 export default function Page() {
 	return (
-		<div>
-			<h1>I am a project page</h1>
-		</div>
+		<>
+			<ProjectHero />
+		</>
 	);
 }
+
+// This page we want to make this a server component for fetching files
