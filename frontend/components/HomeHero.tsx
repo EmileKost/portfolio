@@ -23,7 +23,8 @@ const spanVariants = {
 
 export const HomeHero = () => {
 	const refContainer = useRef<HTMLDivElement>(null);
-	const { positionX, positionY } = useGetMouseAnimationValues(refContainer);
+	const { positionX, positionY, opacityValue } =
+		useGetMouseAnimationValues(refContainer);
 
 	return (
 		<div
@@ -48,6 +49,7 @@ export const HomeHero = () => {
 			<MovingImage
 				x={positionX}
 				y={positionY}
+				opacity={opacityValue}
 			/>
 		</div>
 	);
