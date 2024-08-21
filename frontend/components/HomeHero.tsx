@@ -23,7 +23,7 @@ const spanVariants = {
 
 export const HomeHero = () => {
 	const refContainer = useRef<HTMLDivElement>(null);
-	const { positionX, positionY, opacityValue } =
+	const { positionX, positionY, opacityValue, skewValue } =
 		useGetMouseAnimationValues(refContainer);
 
 	return (
@@ -50,6 +50,7 @@ export const HomeHero = () => {
 				x={positionX}
 				y={positionY}
 				opacity={opacityValue}
+				skewValue={skewValue}
 			/>
 		</div>
 	);

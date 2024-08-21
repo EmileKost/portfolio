@@ -5,10 +5,12 @@ export const MovingImage = ({
 	x,
 	y,
 	opacity,
+	skewValue,
 }: {
 	x: number;
 	y: number;
 	opacity: number;
+	skewValue: number;
 }) => {
 	return (
 		<motion.figure
@@ -16,6 +18,7 @@ export const MovingImage = ({
 				left: x,
 				top: y,
 				opacity: opacity,
+				skewX: skewValue,
 			}}
 			transition={{
 				ease: "easeOut",
