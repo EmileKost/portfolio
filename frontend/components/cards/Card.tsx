@@ -12,7 +12,7 @@ type CardVerticalProps = {
 	idx: number;
 };
 
-export const CardVertical = ({ project, idx }: CardVerticalProps) => {
+export const Card = ({ project, idx }: CardVerticalProps) => {
 	return (
 		<li
 			key={project.title}
