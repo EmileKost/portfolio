@@ -1,13 +1,9 @@
-import Link from "next/link";
-import { twMerge } from "tailwind-merge";
+type TagProps = {
+	text: string;
+};
 
-export const Tag = ({ text, href }: { text: string; href?: string }) => (
-	<li
-		key={text}
-		className={twMerge(
-			"text-xs md:text-lg grow-0 py-0.5 uppercase h-fit rounded-full px-4 border border-blue-primary text-blue-primary hover:text-white-primary hover:bg-blue-primary transition-colors",
-			href ? "cursor-pointer" : "cursor-default"
-		)}>
-		{href ? <Link href={href}>{text}</Link> : text}
-	</li>
+export const Tag = ({ text }: TagProps) => (
+	<h4 className="min-w-14 text-center font-light bg-black-primary text-xs w-fit text-white-primary py-1 px-3 group-hover:bg-blue-primary transition-colors">
+		{text}
+	</h4>
 );
