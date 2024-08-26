@@ -4,13 +4,11 @@ import { motion } from "framer-motion";
 export const MovingImage = ({
 	x,
 	y,
-	opacity,
 	skewX,
 	skewY,
 }: {
 	x: number;
 	y: number;
-	opacity: number;
 	skewX: number;
 	skewY: number;
 }) => {
@@ -19,7 +17,6 @@ export const MovingImage = ({
 			animate={{
 				left: x,
 				top: y,
-				opacity: opacity,
 				skewY: skewY,
 				skewX: skewX,
 			}}
@@ -27,7 +24,7 @@ export const MovingImage = ({
 				ease: "easeOut",
 				duration: 0.8,
 			}}
-			className="absolute z-[-1] opacity-0 w-[260px] h-[346px] sm:w-[300px] sm:h-[400px] md:w-[346px] md:h-[461px] lg:w-[490px] lg:h-[653px]">
+			className="absolute z-[-1] w-[260px] h-[346px] sm:w-[300px] sm:h-[400px] md:w-[346px] md:h-[461px] lg:w-[490px] lg:h-[653px]">
 			<Image
 				src={"/images/me.png"}
 				alt="Picture of me"
