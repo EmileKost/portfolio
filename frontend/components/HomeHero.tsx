@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 import { MovingImage } from "./MovingImage";
 import { useRef } from "react";
-import { getWindowSizes } from "@/src/utils/getWindowSizes";
+import { useGetMouseAnimationValues } from "@/src/hooks/useGetMouseImageAnimationValues";
 
 const heroText = ["Hi there,", "I love to", "develop", "websites"];
 const spanVariants = {
@@ -23,27 +23,13 @@ const spanVariants = {
 
 export const HomeHero = () => {
 	const refContainer = useRef<HTMLDivElement>(null);
-	const getMousePosition = (e: any) => {
-		if (!refContainer.current || !e) return;
-
-		const { windowWidth, windowHeight } = getWindowSizes();
-		const { clientX, clientY } = e;
-
-		if (!windowWidth || !windowHeight) return;
-
-		// Check which half mouse is
-		if (clientX < windowWidth / 2) {
-			// Logic here
-		} else {
-			// Logic here
-		}
-	};
+	const { positionX, positionY, skewXValue, skewYValue } =
+		useGetMouseAnimationValues(refContainer);
 
 	return (
 		<div
-			onMouseMove={(e) => getMousePosition(e)}
 			ref={refContainer}
-			className="w-full relative h-screen flex items-start md:items-center px-2 md:px-6">
+			className="w-full relative h-screen flex items-start md:items-center px-2 md:px-6 overflow-hidden">
 			<h1 className="flex flex-col gap-2 md:gap-6 mt-[150px] md:mt-0">
 				{heroText &&
 					heroText.map((text: string, idx: number) => (
@@ -60,7 +46,12 @@ export const HomeHero = () => {
 						</motion.span>
 					))}
 			</h1>
-			<MovingImage />
+			<MovingImage
+				x={positionX}
+				y={positionY}
+				skewX={skewXValue}
+				skewY={skewYValue}
+			/>
 		</div>
 	);
 };

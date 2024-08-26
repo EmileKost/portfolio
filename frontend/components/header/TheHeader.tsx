@@ -24,7 +24,7 @@ export const TheHeader = ({ isBlue }: { isBlue: boolean }) => {
 			variants={headerVariants}
 			initial={"initial"}
 			animate={"animate"}
-			className="z-max px-2 md:px-6 py-14 flex justify-between items-start md:items-center font-primary w-full fixed top-0 left-0">
+			className="z-max px-2 w-full md:px-6 py-14 flex justify-between items-start md:items-center font-primary fixed top-0 left-0">
 			<h1
 				className={twMerge(
 					"uppercase text-xl md:text-2xl transition-colors",
