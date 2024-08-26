@@ -16,8 +16,8 @@ export const MovingImage = ({
 }) => {
 	const windowWidth = useBreakpointValue();
 	const mobileStyles = {
-		bottom: 32,
-		right: 6,
+		bottom: 8,
+		right: 8,
 		opacity: 1,
 	};
 
@@ -38,7 +38,7 @@ export const MovingImage = ({
 				ease: "easeOut",
 				duration: 0.8,
 			}}
-			className="absolute z-[-1] opacity-0 w-[260px] h-[346px] sm:w-[300px] sm:h-[400px] md:w-[346px] md:h-[461px] lg:w-[490px] lg:h-[653px]">
+			className="absolute z-[-1] opacity-0 w-[70vw] md:w-[30vw] h-auto">
 			<Image
 				src={"/images/me.png"}
 				alt="Picture of me"
