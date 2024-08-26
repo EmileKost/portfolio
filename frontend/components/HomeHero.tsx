@@ -23,13 +23,13 @@ const spanVariants = {
 
 export const HomeHero = () => {
 	const refContainer = useRef<HTMLDivElement>(null);
-	const { positionX, positionY, opacityValue, skewXValue, skewYValue } =
+	const { positionX, positionY, skewXValue, skewYValue } =
 		useGetMouseAnimationValues(refContainer);
 
 	return (
 		<div
 			ref={refContainer}
-			className="w-full relative h-screen flex items-start md:items-center px-2 md:px-6">
+			className="w-full relative h-screen flex items-start md:items-center px-2 md:px-6 overflow-hidden">
 			<h1 className="flex flex-col gap-2 md:gap-6 mt-[150px] md:mt-0">
 				{heroText &&
 					heroText.map((text: string, idx: number) => (
@@ -49,7 +49,6 @@ export const HomeHero = () => {
 			<MovingImage
 				x={positionX}
 				y={positionY}
-				opacity={opacityValue}
 				skewX={skewXValue}
 				skewY={skewYValue}
 			/>
