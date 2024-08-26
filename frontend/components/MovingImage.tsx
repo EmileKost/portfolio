@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+import { useBreakpointValue } from "@/src/hooks/useGetBreakpointValue";
+
 export const MovingImage = ({
 	x,
 	y,
@@ -12,15 +14,26 @@ export const MovingImage = ({
 	skewX: number;
 	skewY: number;
 }) => {
+	const windowWidth = useBreakpointValue();
+	const mobileStyles = {
+		bottom: 32,
+		right: 6,
+		opacity: 1,
+	};
+
 	return (
 		<motion.figure
-			animate={{
-				left: x,
-				top: y,
-				skewY: skewY,
-				skewX: skewX,
-				opacity: 1,
-			}}
+			animate={
+				windowWidth >= 768
+					? {
+							left: x,
+							top: y,
+							skewY: skewY,
+							skewX: skewX,
+							opacity: 1,
+					  }
+					: mobileStyles
+			}
 			transition={{
 				ease: "easeOut",
 				duration: 0.8,
